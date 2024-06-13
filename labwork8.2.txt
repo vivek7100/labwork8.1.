@@ -1,0 +1,176 @@
+﻿Q.1 Write a Program to perform the merge operation of two 1D arrays & store it in another array. Keep in mind that both array sizes can be different.
+For example,
+Input:
+Enter array A's size: 5
+
+
+Enter array A's elements:
+a[0] = 7
+a[1] = 4
+a[2] = 9
+a[3] = 5
+a[4] = 2
+
+
+Enter array B's size: 3
+
+
+Enter array B's elements:
+b[0] = 1
+b[1] = 3
+b[2] = 6
+
+
+Output:
+Array C is: 7, 4, 9, 5, 2, 1, 3, 6
+Ans:  #include <stdio.h>
+int main() {
+int n,f,k,i;
+printf("enter array A's size:");
+scanf("%d",&n);
+printf("Enter array A's elements:\n");
+int a[n];
+for( i = 0; i < n; i++) {
+printf("a[%d] = ", i);
+scanf("\n%d", &a[i]);
+}
+printf("enter array B's size:");
+scanf("%d",&f);
+printf("Enter array B's elements:\n");
+int b[f];
+for(i = 0; i <f; i++) {
+    printf("b[%d] = ", i);
+scanf("\n%d", &b[i]);
+}
+ k=n+f;
+int c[k];
+  for( i = 0; i < n; i++) {
+        c[i] = a[i];
+     }
+    for(i = 0; i < f; i++) {
+        c[n + i] = b[i];
+    }
+printf("array c is:");
+ for(int i = 0; i < k; i++) {
+        printf("%d, ", c[i]);
+    }
+
+
+return 0;
+}
+
+
+O\p: /tmp/2AJbHKEyeh.o
+enter array A's size:5
+Enter array A's elements:
+a[0] = 7
+a[1] = 4
+a[2] = 9
+a[3] = 5
+a[4] = 2
+enter array B's size:3
+Enter array B's elements:
+b[0] = 1
+b[1] = 3
+b[2] = 6
+array c is:7, 4, 9, 5, 2, 1, 3, 6, 
+
+
+=== Code Execution Successful ===
+Q.2 Write a Program to find leap years between two given numbers and store them in an array. And then print that array.
+For example,
+Input:
+Enter the first number: 2020
+
+
+Enter the second number: 2040
+
+
+Output:
+The array is: 2020, 2024, 2028, 2032, 2036, 2040
+Ans:  // Online C compiler to run C program online
+#include <stdio.h>
+
+
+int main() {
+    int num1=100,num2=100,year=0,i;
+    int a[num1],b[num2],c[year];
+  printf("enter the number: ");
+scanf("%d",&a[num1]);
+printf("enter the number: ");
+scanf("%d",&b[num2]);
+for (i=a[num1];i<=b[num2];i++){
+    if(i %4==0){
+        c[year]=i;
+        year++;
+    }
+}
+printf("The array is: ");
+    for (i = 0; i < year; i++) {
+        printf("%d, ", c[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
+
+O\p: /tmp/Rg0u7Cmu3g.o
+enter the number: 2020
+enter the number: 2040
+The array is: 2020, 2024, 2028, 2032, 2036, 2040, 
+
+
+
+
+=== Code Execution Successful ===
+Q.3 Write a Program to find square of each element from the given array.
+For example,
+Input:
+Enter array size: 5
+
+
+Enter array elements:
+a[0] = 7
+a[1] = 4
+a[2] = 9
+a[3] = 5
+a[4] = 2
+
+
+Ans: // Online C compiler to run C program online
+#include <stdio.h>
+
+
+int main() {
+    int n;
+    printf("enter the array size: ");
+    scanf("%d",&n);
+    printf("enter the array element:\n");
+  int a[n];
+  for (int i=0;i<n;i++){
+      printf("a[%d]=",i);
+      scanf("\n%d",&a[i]);
+  }
+    printf("The squares are:");
+     for (int i = 0; i < n; i++) {
+        printf("%d, ", a[i] * a[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
+
+O\p: /tmp/b8U44HoHbA.o
+enter the array size: 5
+enter the array element:
+a[0]=7
+a[1]=4
+a[2]=9
+a[3]=5
+a[4]=2
+The squares are:49, 16, 81, 25, 4, 
+
+
+
+
+=== Code Execution Successful ===
